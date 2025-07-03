@@ -1,0 +1,1 @@
+FROM node:18 # Instalar FFmpeg RUN apt-get update && apt-get install -y ffmpeg # Copiar el código del proyecto WORKDIR /app COPY . . # Instalar dependencias de Node.js RUN npm install # Exponer el puerto EXPOSE 10000 # Comando para iniciar el servidor CMD ["node", "server.js"]
