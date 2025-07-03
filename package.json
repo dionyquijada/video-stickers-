@@ -1,0 +1,1 @@
+{ "name": "video-sticker-app", "version": "1.0.0", "description": "App para crear stickers de video", "main": "server.js", "scripts": { "start": "node server.js" }, "dependencies": { "express": "^4.17.1", "fluent-ffmpeg": "^2.1.2", "ytdl-core": "^4.11.0" } }
