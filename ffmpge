@@ -1,0 +1,7 @@
+ffmpeg(videoStream)
+    .setStartTime(startTime)
+    .setDuration(endTime - startTime)
+    .outputOptions('-c:v libx264')
+    .outputOptions('-c:a aac')
+    .outputOptions('-crf 23') // Optimiza el tamaño del archivo
+    .save(outputPath)
