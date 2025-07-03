@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Stickers de Video</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Crear Stickers de Video para WhatsApp</h1>
+        <div class="input-section">
+            <input type="text" id="videoUrl" placeholder="Ingresa la URL del video (YouTube o MP4 directo)">
+            <button onclick="loadVideo()">Cargar Video</button>
+        </div>
+        <div class="video-container">
+            <video id="videoPlayer" controls>
+                <source id="videoSource" src="" type="video/mp4">
+                Tu navegador no soporta el elemento de video.
+            </video>
+        </div>
+        <div class="controls">
+            <label for="startTime">Inicio (segundos):</label>
+            <input type="number" id="startTime" min="0" step="0.1" value="0">
+            <label for="endTime">Fin (segundos):</label>
+            <input type="number" id="endTime" min="0" step="0.1" value="6">
+            <button onclick="previewClip()">Previsualizar Fragmento</button>
+            <button onclick="generateSticker()">Generar Sticker</button>
+        </div>
+        <div class="output">
+            <p id="status">Ingresa una URL para comenzar.</p>
+            <a id="downloadLink" style="display: none;" download="sticker.mp4">Descargar Sticker</a>
+        </div>
+        <button onclick="shareWhatsApp()" class="whatsapp-btn">Compartir en WhatsApp</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
